@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A349A653-49F4-483B-95D0-E0C6762B0D1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NationalInstruments.Vision.Acquisition.Imaqdx</RootNamespace>
+    <AssemblyName>NationalInstruments.Vision.Acquisition.Imaqdx</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NationalInstruments.Common, Version=17.5.40.49153, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\National Instruments\MeasurementStudioVS2012\DotNET\Assemblies\Current\NationalInstruments.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.MStudioCLM, Version=17.5.40.49152, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\National Instruments\MeasurementStudioVS2012\DotNET\Assemblies\Current\NationalInstruments.MStudioCLM.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.NiLmClientDLL, Version=17.5.40.49152, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\National Instruments\MeasurementStudioVS2012\DotNET\Assemblies\Current\NationalInstruments.NiLmClientDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Vision.Common, Version=13.1.35.100, Culture=neutral, PublicKeyToken=18cbae0f9955702a, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\github\ni\vdm-dotnet\src\dotNet\Exports\VS2008\DotNET\Assemblies\Current\NationalInstruments.Vision.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImaqdxAcquisition.cs" />
+    <Compile Include="ImaqdxAcquisitionType.cs" />
+    <Compile Include="ImaqdxAttribute.cs" />
+    <Compile Include="ImaqdxAttributeCollection.cs" />
+    <Compile Include="ImaqdxAttributeType.cs" />
+    <Compile Include="ImaqdxAttributeVisibility.cs" />
+    <Compile Include="ImaqdxBoolAttribute.cs" />
+    <Compile Include="ImaqdxBusType.cs" />
+    <Compile Include="ImaqdxCameraControlMode.cs" />
+    <Compile Include="ImaqdxCameraInformation.cs" />
+    <Compile Include="ImaqdxCommandAttribute.cs" />
+    <Compile Include="ImaqdxDoubleAttribute.cs" />
+    <Compile Include="ImaqdxEnumAttribute.cs" />
+    <Compile Include="ImaqdxEnumAttributeItem.cs" />
+    <Compile Include="ImaqdxError.cs" />
+    <Compile Include="ImaqdxEthernetSession.cs" />
+    <Compile Include="ImaqdxException.cs" />
+    <Compile Include="ImaqdxGrabEventArgs.cs" />
+    <Compile Include="ImaqdxImageAcquiredEventArgs.cs" />
+    <Compile Include="ImaqdxInt64Attribute.cs" />
+    <Compile Include="ImaqdxNumericAttribute.cs" />
+    <Compile Include="ImaqdxSequenceEventArgs.cs" />
+    <Compile Include="ImaqdxSession.cs" />
+    <Compile Include="ImaqdxSnapEventArgs.cs" />
+    <Compile Include="ImaqdxStandardAttribute.cs" />
+    <Compile Include="ImaqdxStringAttribute.cs" />
+    <Compile Include="ImaqdxSystem.cs" />
+    <Compile Include="ImaqdxUInt32Attribute.cs" />
+    <Compile Include="Internal\ExceptionBuilder.cs" />
+    <Compile Include="Internal\ImaqdxAttributeInformation.cs" />
+    <Compile Include="Internal\ImaqdxAttributeManager.cs" />
+    <Compile Include="Internal\ImaqdxBufferNumberMode.cs" />
+    <Compile Include="Internal\ImaqdxCameraInformation.cs" />
+    <Compile Include="Internal\ImaqdxEnumItem.cs" />
+    <Compile Include="Internal\ImaqdxEventManager.cs" />
+    <Compile Include="Internal\ImaqdxFrameDoneEventHandler.cs" />
+    <Compile Include="Internal\ImaqdxGrabAsyncState.cs" />
+    <Compile Include="Internal\ImaqdxInterfaceFileFlags.cs" />
+    <Compile Include="Internal\ImaqdxNumericAttribute.cs" />
+    <Compile Include="Internal\ImaqdxPnpEvent.cs" />
+    <Compile Include="Internal\ImaqdxPnpEventHandler.cs" />
+    <Compile Include="Internal\ImaqdxSequenceAsyncState.cs" />
+    <Compile Include="Internal\ImaqdxSessionHandle.cs" />
+    <Compile Include="Internal\ImaqdxSessionManager.cs" />
+    <Compile Include="Internal\ImaqdxSnapAsyncState.cs" />
+    <Compile Include="Internal\NiImaqdxDll.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
